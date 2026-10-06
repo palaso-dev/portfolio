@@ -53,7 +53,7 @@
         ],
         "sameAs": [
           "https://linkedin.com/in/paulo-choque",
-          "https://github.com/palaso0",
+          "https://github.com/palaso-dev",
           "https://marketplace.visualstudio.com/publishers/palaso"
         ]
       },
@@ -70,9 +70,10 @@
   </script>
   <script>
     (function () {
-      var saved = localStorage.getItem('theme');
-      var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.dataset.theme = saved || (dark ? 'dark' : 'light');
+      localStorage.removeItem('theme');
+      var saved = localStorage.getItem('theme_preference');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = saved || (systemDark ? 'dark' : 'light');
     })();
   </script>
   <link rel="stylesheet" href="styles.css">
@@ -181,8 +182,8 @@
           <p>Fast and lightweight desktop client for macOS, Windows, and Linux that simplifies container management with support for Docker Desktop, OrbStack, Colima, Rancher, and Podman.</p>
           <ul class="tags"><li>Rust</li><li>TypeScript</li><li>Docker</li><li>DevOps</li></ul>
           <div class="card-actions">
-            <a class="btn primary small" href="https://palaso0.github.io/i-love-containers-website/" target="_blank" rel="noopener">Website ↗</a>
-            <a class="btn small" href="https://github.com/palaso0/i-love-containers" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="btn primary small" href="https://palaso-dev.github.io/i-love-containers-website/" target="_blank" rel="noopener">Website ↗</a>
+            <a class="btn small" href="https://github.com/palaso-dev/i-love-containers" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </article>
         <article class="card">
@@ -198,7 +199,7 @@
           <div class="card-actions">
             <a class="btn primary small" href="https://marketplace.visualstudio.com/items?itemName=palaso.just-files" target="_blank" rel="noopener">Marketplace ↗</a>
             <a class="btn small" href="https://open-vsx.org/extension/palaso/just-files" target="_blank" rel="noopener">Open VSX ↗</a>
-            <a class="btn small" href="https://github.com/palaso0/just-files" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="btn small" href="https://github.com/palaso-dev/just-files" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </article>
         <article class="card">
@@ -214,7 +215,7 @@
           <div class="card-actions">
             <a class="btn primary small" href="https://marketplace.visualstudio.com/items?itemName=palaso.php-interface-definition" target="_blank" rel="noopener">Marketplace ↗</a>
             <a class="btn small" href="https://open-vsx.org/extension/palaso/php-interface-definition" target="_blank" rel="noopener">Open VSX ↗</a>
-            <a class="btn small" href="https://github.com/palaso0/php-interface-definition" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="btn small" href="https://github.com/palaso-dev/php-interface-definition" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </article>
         <article class="card">
@@ -355,7 +356,7 @@
       <p>Have a project in mind or want to connect? Reach out through my professional profiles.</p>
       <div class="actions">
         <a class="btn primary" href="https://linkedin.com/in/paulo-choque" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/palaso0" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://github.com/palaso-dev" target="_blank" rel="noopener">GitHub</a>
       </div>
     </section>
   </main>

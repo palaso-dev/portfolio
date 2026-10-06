@@ -1,9 +1,18 @@
 const root = document.documentElement;
 
+const getSystemTheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
 document.getElementById('theme-toggle').addEventListener('click', () => {
-  const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  const current = root.dataset.theme || getSystemTheme();
+  const next = current === 'dark' ? 'light' : 'dark';
   root.dataset.theme = next;
-  localStorage.setItem('theme', next);
+  localStorage.setItem('theme_preference', next);
+});
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (!localStorage.getItem('theme_preference')) {
+    root.dataset.theme = e.matches ? 'dark' : 'light';
+  }
 });
 
 const menuToggle = document.getElementById('menu-toggle');
